@@ -10,22 +10,21 @@ import {
   Text,
   View
 } from 'react-native';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+import Main from './components/Main';
+import reducer from './reducers/index';
 
 export default class App extends Component<{}> {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Nhan</Text>
-      </View>
+      <Provider store={store}>
+        <Main />
+      </Provider>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center',
-    backgroundColor: '#c3c3c9'
-  }
-});
+//create store
+const store = createStore(reducer);

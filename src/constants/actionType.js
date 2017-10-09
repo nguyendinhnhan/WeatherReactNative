@@ -1,0 +1,5 @@
+export const SHOW_ALL = 'SHOW_ALL';
+export const SHOW_MEMORIZED = 'SHOW_MEMORIZED';
+export const SHOW_PRACTICE = 'SHOW_PRACTICE';
+
+export const TOGGLE_MEMORIZED = 'TOGGLE_MEMORIZED';
